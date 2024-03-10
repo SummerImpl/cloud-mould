@@ -4,7 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.summer</groupId>
     <artifactId>cloud-mould</artifactId>
+    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>user</module>
+        <module>order</module>
+        <module>stock</module>
+    </modules>
     <name>cloud-mould</name>
     <description>cloud-mould</description>
     <properties>

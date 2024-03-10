@@ -1,0 +1,16 @@
+server:
+  port: 8018
+
+spring:
+  application:
+    name: user-service
+  cloud:
+    consul:
+      discovery:
+        instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
+        prefer-ip-address: true
+      host: 192.168.50.20
+      port: 8500
+    loadbalancer:
+      ribbon:
+        enabled: false
