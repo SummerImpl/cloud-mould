@@ -10,6 +10,7 @@
         <module>user</module>
         <module>order</module>
         <module>stock</module>
+        <module>oauth</module>
     </modules>
     <name>cloud-mould</name>
     <description>cloud-mould</description>
