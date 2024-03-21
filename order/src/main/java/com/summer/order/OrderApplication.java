@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @Author：xhquan
+ * @Author：pipe
  * @Project：cloud-mould
  * @since：2024/3/10 10:32
  */
@@ -12,6 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class OrderApplication {
 
     public static void main(String[] args) {
+        Thread d= new Thread(()->{});
+        d.start();
         SpringApplication.run(OrderApplication.class, args);
     }
 

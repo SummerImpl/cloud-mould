@@ -7,7 +7,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
 /**
- * @Author：xhquan
+ * @Author：pipe
  * @Project：cloud-mould
  * @since：2024/3/12 09:47
  */

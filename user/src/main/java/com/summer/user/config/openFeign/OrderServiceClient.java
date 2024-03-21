@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
- * @Author：xhquan
+ * @Author：pipe
  * @Project：cloud-mould
  * @since：2024/3/10 10:21
  */

@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * @Author：xhquan
+ * @Author：pipe
  * @Project：cloud-mould
  * @since：2024/3/10 10:16
  */
@@ -17,3 +17,5 @@ public class UserApplication {
         SpringApplication.run(UserApplication.class, args);
     }
 }
+
+

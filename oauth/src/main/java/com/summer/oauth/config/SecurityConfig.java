@@ -12,7 +12,7 @@ import org.springframework.security.oauth2.jwt.JwtDecoders;
 import org.springframework.security.web.SecurityFilterChain;
 
 /**
- * @Author：xhquan
+ * @Author：pipe
  * @Project：cloud-mould
  * @since：2024/3/11 16:59
  */

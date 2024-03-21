@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @Author：xhquan
+ * @Author：pipe
  * @Project：cloud-mould
  * @since：2024/3/10 10:39
  */
@@ -24,9 +24,7 @@ public class UserController {
 
     @GetMapping("/add")
     public String add() {
-        String order = orderServiceClient.addOrder();
-        return "user server " + port + order;
-
-
+//        String order = orderServiceClient.addOrder();
+        return "user server " + port + "34";
     }
 }
