@@ -11,6 +11,9 @@
         <module>order</module>
         <module>stock</module>
         <module>oauth</module>
+        <module>payment</module>
+        <module>goods</module>
+        <module>common</module>
     </modules>
     <name>cloud-mould</name>
     <description>cloud-mould</description>

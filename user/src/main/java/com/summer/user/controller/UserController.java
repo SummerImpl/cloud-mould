@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since：2024/3/10 10:39
  */
 @RestController
-@RequestMapping("/user")
+//@RequestMapping("/user")
 public class UserController {
 
     @Value("${server.port}")
