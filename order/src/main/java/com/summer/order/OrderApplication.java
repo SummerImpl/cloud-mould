@@ -12,8 +12,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class OrderApplication {
 
     public static void main(String[] args) {
-        Thread d= new Thread(()->{});
-        d.start();
         SpringApplication.run(OrderApplication.class, args);
     }
 
