@@ -1,6 +1,12 @@
 package com.summer.oauth.service.oauth;
 
 import com.summer.oauth.domain.AccessToken;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.oauth2.common.OAuth2AccessToken;
+import org.springframework.security.oauth2.provider.OAuth2Authentication;
+import org.springframework.security.oauth2.provider.TokenRequest;
+import org.springframework.security.oauth2.provider.token.AuthorizationServerTokenServices;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**
@@ -8,14 +14,21 @@ import org.springframework.stereotype.Service;
  * @Author pipe
  * @Date 2024/4/9 14:36
  */
-@Service
-public class TokenService {
+@Component
+public class TokenService implements AuthorizationServerTokenServices {
 
-    public AccessToken createAccessToken(String clientId, String code, String redirectUri) {
+    @Override
+    public OAuth2AccessToken createAccessToken(OAuth2Authentication oAuth2Authentication) throws AuthenticationException {
         return null;
     }
 
-    public boolean validateToken(String token) {
-        return false;
+    @Override
+    public OAuth2AccessToken refreshAccessToken(String s, TokenRequest tokenRequest) throws AuthenticationException {
+        return null;
+    }
+
+    @Override
+    public OAuth2AccessToken getAccessToken(OAuth2Authentication oAuth2Authentication) {
+        return null;
     }
 }

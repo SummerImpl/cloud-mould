@@ -26,16 +26,16 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         // 从请求中获取访问令牌
-        String token = request.getHeader("Authorization");
-        // 验证令牌
-        boolean valid = tokenService.validateToken(token);
-        if (valid) {
-            // 如果验证通过，允许请求继续执行
-            filterChain.doFilter(request, response);
-        } else {
-            // 如果验证失败，返回错误信息
-            response.setStatus(HttpStatus.UNAUTHORIZED.value());
-            response.getWriter().write("Invalid token");
-        }
+//        String token = request.getHeader("Authorization");
+//        // 验证令牌
+//        boolean valid = tokenService.validateToken(token);
+//        if (valid) {
+//            // 如果验证通过，允许请求继续执行
+//            filterChain.doFilter(request, response);
+//        } else {
+//            // 如果验证失败，返回错误信息
+//            response.setStatus(HttpStatus.UNAUTHORIZED.value());
+//            response.getWriter().write("Invalid token");
+//        }
     }
 }

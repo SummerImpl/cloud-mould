@@ -1,5 +1,6 @@
 package com.summer.oauth.config;
 
+import com.summer.oauth.service.oauth.provider.UserAuthenticationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,8 +10,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
 /**
  * @Author：pipe
@@ -20,16 +19,17 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @Configuration
 @EnableWebSecurity
 public class OAuth2SecurityConfig extends WebSecurityConfigurerAdapter {
+
     @Autowired
     private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private UserAuthenticationProvider userAuthenticationProvider;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         //创建一个登录用户
-        auth.inMemoryAuthentication()
-                .withUser("admin")
-                .password(passwordEncoder.encode("123123"))
-                .authorities("admin_role");
+        auth.authenticationProvider(userAuthenticationProvider);
     }
 
     @Override
