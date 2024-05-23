@@ -1,6 +1,5 @@
 package com.summer.order.service;
 
-import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -36,7 +35,7 @@ public class OrderService {
     }
 
     //====================seata 分布式事务====================
-    @GlobalTransactional
+//    @GlobalTransactional
     public void createOrder(){
 
         // 创建订单

@@ -41,6 +41,7 @@ public class OAuth2SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
+                .loginPage("/iam/login")
                 .permitAll();
     }
 

@@ -1,6 +1,8 @@
 package com.summer.order.controller;
 
+import com.summer.order.entity.OrderEntity;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.annotation.Order;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,7 +29,7 @@ public class OrderController {
         String ser = "调用 order 成功 服务端口是：" + port;
 
         try {
-            Thread.sleep(5000);
+            Thread.sleep(20000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -47,5 +49,17 @@ public class OrderController {
         HashMap<String, Object> map = new HashMap<>();
         map.put("res", list);
         return map;
+    }
+
+
+    @GetMapping(value = "/ta")
+    public String sd() {
+        OrderEntity orderEntity = new OrderEntity();
+        orderEntity.setCode("234");
+        orderEntity.setName("订单");
+
+
+
+        return orderEntity.toString();
     }
 }
