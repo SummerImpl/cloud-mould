@@ -1,21 +1,12 @@
 server:
-  port: 8018
+  port: 8081
 
 spring:
   application:
     name: user-service
   cloud:
-    consul:
+    nacos:
       discovery:
-        instance-id: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
-        prefer-ip-address: true
-      host: 192.168.50.20
-      port: 8500
-    loadbalancer:
-      ribbon:
-        enabled: false
-  zipkin:
-    baseUrl: http://192.168.50.25:9411/
-    sleuth:
-      sampler:
-        probability: 1.0
+        server-addr: 192.168.50.20:8848
+      config:
+        server-addr: 192.168.50.20:8848
