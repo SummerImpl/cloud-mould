@@ -28,6 +28,7 @@
         <spring.cloud.alibaba>2.2.7.RELEASE</spring.cloud.alibaba>
         <!-- Spring Cloud 版本 -->
         <spring.cloud>Hoxton.SR12</spring.cloud>
+        <dubbo-spring-boot-starter.version>2.7.8</dubbo-spring-boot-starter.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -72,6 +73,12 @@
                 <version>${spring.cloud}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo-spring-boot-starter.version}</version>
             </dependency>
 
         </dependencies>

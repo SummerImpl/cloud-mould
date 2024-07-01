@@ -1,0 +1,23 @@
+server:
+  port: 8313
+
+spring:
+  application:
+    name: stock_service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.50.20:8848
+      config:
+        server-addr: 192.168.50.20:8848
+    sentinel:
+      transport:
+        dashboard: 192.168.50.20:8858
+  datasource:
+    url: jdbc:mysql://192.168.50.20:3306/stock?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: uep
+    password: Cyb2021@dgsee
+    mybatis:
+      # 配置mapper的扫描，找到所有的mapper.xml映射文件
+      mapperLocations: classpath:mapper/*.xml

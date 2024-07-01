@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pipe.stock.dao.StockDao">
+    <insert id="insert">
+        insert into stock(id, name, number, create_time, update_time, tenant_id)
+        values (#{id}, #{name}, #{number}, #{createTime}, #{updateTime}, #{tenantId});
+    </insert>
+
+    <insert id="insertMap">
+        insert into stock(id, name, number, create_time, update_time, tenant_id)
+        values (#{id}, #{name}, #{number}, #{createTime}, #{updateTime}, #{tenantId});
+    </insert>
+
+    <select id="selectAll" resultType="com.pipe.stock.entity.StockEntity">
+        select * from stock;
+    </select>
+</mapper>
